@@ -1,5 +1,6 @@
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
+    style="margin-left: 940px;">
     Launch demo modal
 </button>
 
@@ -10,30 +11,29 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button id="closePopup" type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <!-- <form> -->
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Name</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Product Type</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <label for="exampleFormControlInput1">Cream Type</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Name">
-                </div>
-                
-                <!-- </form> -->
+                <form [formGroup]="productsForm">
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Name</label>
+                        <input formControlName="name" type="text" class="form-control" placeholder="Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Product Type</label>
+                        <input formControlName="product_type" type="text" class="form-control" placeholder="Product Type">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Cream Type</label>
+                        <input formControlName="cream_type" type="text" class="form-control" placeholder="Cream Type">
+                    </div>
+                </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" (click)="onSubmit()" class="btn btn-primary">Add Product</button>
             </div>
         </div>
     </div>
