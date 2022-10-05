@@ -1,0 +1,16 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Vanila",
+      "product_type": "Cake",
+      "cream_type": "normal"
+    },
+    {
+      "id": 2,
+      "name": "Choco Chips",
+      "product_type": "Cake",
+      "cream_type": "fresh"
+    }
+  ]
+}
