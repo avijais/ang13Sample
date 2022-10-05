@@ -27,7 +27,7 @@
                 <td>{{expense?.date_time}}</td>
                 <td>
                     <button type="button" class="btn btn-warning">Edit</button>
-                    <button type="button" class="btn btn-danger m-2">Delete</button>
+                    <button type="button" (click)="deleteExpense(expense.id)" class="btn btn-danger m-2">Delete</button>
                 </td>
             </tr>
         </tbody>

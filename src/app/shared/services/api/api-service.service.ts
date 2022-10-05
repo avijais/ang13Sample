@@ -18,4 +18,8 @@ export class ApiServiceService {
   getExpenses() {
     return this.http.get<any>(environment.baseUrl+'expenses');
   }
+
+  deleteExpens(id: any) {
+    return this.http.delete(environment.baseUrl+'expenses/' + id);
+  }
 }

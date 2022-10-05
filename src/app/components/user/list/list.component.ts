@@ -33,6 +33,17 @@ export class ListComponent implements OnInit {
     )
   }
 
+  deleteExpense(id: any) {
+    this.api.deleteExpens(id).subscribe(
+      success => {
+        this.getExpenses()
+        alert('Expense deleted successfully')
+      }, err => {
+        alert(err.message)
+      }
+    )
+  }
+
   createForm() {
     const dateObj = new Date();
     const date = dateObj.getDate() + '/' + dateObj.getMonth() + '/' + dateObj.getFullYear();
