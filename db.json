@@ -9,12 +9,12 @@
       "date_time": "5/9/2022 16:15:30"
     },
     {
-      "id": 3,
+      "id": 2,
       "amount": "10",
       "description": "Golgappa",
       "expense_category": "Food",
       "paid_by": "Cash",
-      "date_time": "5/9/2022 16:15:30"
+      "date_time": "5/9/2022 17:18:12"
     }
   ]
 }

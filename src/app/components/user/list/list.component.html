@@ -1,38 +1,41 @@
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"
-    style="margin-left: 940px;">
-    Add Expense
-</button>
-
 <div class="container">
-    <table class="table table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Sr. No.</th>
-                <th scope="col">Amount</th>
-                <th scope="col">Description</th>
-                <th scope="col">Expense Category</th>
-                <th scope="col">Paid By</th>
-                <th scope="col">Date & Time</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let expense of expenses; let i = index;">
-                <th scope="col">{{i+1}}</th>
-                <td>{{expense?.amount}}</td>
-                <td>{{expense?.description}}</td>
-                <td>{{expense?.expense_category}}</td>
-                <td>{{expense?.paid_by}}</td>
-                <td>{{expense?.date_time}}</td>
-                <td>
-                    <button type="button" (click)="editExpense(expense)" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Edit</button>
-                    <button type="button" (click)="deleteExpense(expense.id)" class="btn btn-danger m-2">Delete</button>
-                </td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary mt-2" data-toggle="modal" data-target="#exampleModal"
+        style="margin-left: 940px;">
+        Add Expense
+    </button>
+
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Sr. No.</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Expense Category</th>
+                    <th scope="col">Paid By</th>
+                    <th scope="col">Date & Time</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let expense of expenses; let i = index;">
+                    <th scope="col">{{i+1}}</th>
+                    <td>{{expense?.amount}}</td>
+                    <td>{{expense?.description}}</td>
+                    <td>{{expense?.expense_category}}</td>
+                    <td>{{expense?.paid_by}}</td>
+                    <td>{{expense?.date_time}}</td>
+                    <td>
+                        <button type="button" (click)="editExpense(expense)" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Edit</button>
+                        <button type="button" (click)="deleteExpense(expense.id)" class="btn btn-danger m-2">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">

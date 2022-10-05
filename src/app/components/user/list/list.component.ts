@@ -101,9 +101,10 @@ export class ListComponent implements OnInit {
     
     this.api.editExpens(expensesData).subscribe(
       success => {
+        document.getElementById('closePopup')?.click()
+        alert('Updated Successfully.')
         this.getExpenses()
         this.isEdit = false
-        document.getElementById('closePopup')?.click()
         this.productsForm.reset()
       }, err => {
         alert(err.message)
