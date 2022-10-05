@@ -10,6 +10,7 @@ import { ApiServiceService } from 'src/app/shared/services/api/api-service.servi
 export class ListComponent implements OnInit {
   productsForm!: FormGroup
   expenses: any = []
+  isEdit= false;
 
   constructor(
     private fb: FormBuilder,
@@ -33,17 +34,6 @@ export class ListComponent implements OnInit {
     )
   }
 
-  deleteExpense(id: any) {
-    this.api.deleteExpens(id).subscribe(
-      success => {
-        this.getExpenses()
-        alert('Expense deleted successfully')
-      }, err => {
-        alert(err.message)
-      }
-    )
-  }
-
   createForm() {
     const dateObj = new Date();
     const date = dateObj.getDate() + '/' + dateObj.getMonth() + '/' + dateObj.getFullYear();
@@ -56,6 +46,12 @@ export class ListComponent implements OnInit {
       paid_by: [''],
       date_time: [date + ' ' + time]
     })
+  }
+
+  onClosePopup() {
+    setTimeout(() => {
+      this.isEdit = false;
+    }, 500);
   }
 
   onSubmit() {
@@ -75,7 +71,44 @@ export class ListComponent implements OnInit {
         alert(err.message)
       }
     )
+  }
+
+  deleteExpense(id: any) {
+    this.api.deleteExpens(id).subscribe(
+      success => {
+        this.getExpenses()
+        alert('Expense deleted successfully')
+      }, err => {
+        alert(err.message)
+      }
+    )
+  }
+
+  editExpense(expense: any) {
+    this.isEdit = true
+    this.productsForm.patchValue({
+      id: expense.id,
+      amount: expense.amount,
+      description: expense.description,
+      expense_category: expense.expense_category,
+      paid_by: expense.paid_by,
+      date_time: expense.date_time
+    })
+  }
+
+  saveEditExpense() {
+    let expensesData = Object.assign({}, this.productsForm.value)
     
+    this.api.editExpens(expensesData).subscribe(
+      success => {
+        this.getExpenses()
+        this.isEdit = false
+        document.getElementById('closePopup')?.click()
+        this.productsForm.reset()
+      }, err => {
+        alert(err.message)
+      }
+    )
   }
 
 }

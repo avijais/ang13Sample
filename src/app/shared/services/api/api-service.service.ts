@@ -22,4 +22,8 @@ export class ApiServiceService {
   deleteExpens(id: any) {
     return this.http.delete(environment.baseUrl+'expenses/' + id);
   }
+
+  editExpens(data: any) {
+    return this.http.put(environment.baseUrl+'expenses/' + data.id, data);
+  }
 }

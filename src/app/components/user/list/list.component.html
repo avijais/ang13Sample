@@ -26,7 +26,7 @@
                 <td>{{expense?.paid_by}}</td>
                 <td>{{expense?.date_time}}</td>
                 <td>
-                    <button type="button" class="btn btn-warning">Edit</button>
+                    <button type="button" (click)="editExpense(expense)" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Edit</button>
                     <button type="button" (click)="deleteExpense(expense.id)" class="btn btn-danger m-2">Delete</button>
                 </td>
             </tr>
@@ -40,7 +40,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button id="closePopup" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <button id="closePopup" type="button" (click)="onClosePopup()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -66,7 +66,8 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" (click)="onSubmit()" class="btn btn-primary">Add Product</button>
+                <button type="button" *ngIf="!isEdit" (click)="onSubmit()" class="btn btn-primary">Add</button>
+                <button type="button" *ngIf="isEdit" (click)="saveEditExpense()" class="btn btn-warning">Update</button>
             </div>
         </div>
     </div>
