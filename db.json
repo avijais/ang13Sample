@@ -17,6 +17,14 @@
       "name": "Vanilla",
       "product_type": "Cake",
       "cream_type": "Fresh"
+    },
+    {
+      "id": 4,
+      "amount": "1132.09",
+      "description": "Axis CC netmeds medicine for papa and me",
+      "expense_category": "Medicine",
+      "payment_by": "Axis CC",
+      "date_time": "5/9/2022 16:15:30"
     }
   ]
 }

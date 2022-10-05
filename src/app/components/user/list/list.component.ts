@@ -20,11 +20,16 @@ export class ListComponent implements OnInit {
   }
 
   createForm() {
+    const dateObj = new Date();
+    const date = dateObj.getDate() + '/' + dateObj.getMonth() + '/' + dateObj.getFullYear();
+    const time = dateObj.getHours() + ':' + dateObj.getMinutes() + ':' + dateObj.getSeconds();
     this.productsForm = this.fb.group({
       id: [],
-      name: [''],
-      product_type: [''],
-      cream_type: ['']
+      amount: [],
+      description: [''],
+      expense_category: [''],
+      payment_by: [''],
+      date_time: [date + ' ' + time]
     })
   }
 
