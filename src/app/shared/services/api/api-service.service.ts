@@ -11,7 +11,11 @@ export class ApiServiceService {
     private http: HttpClient
   ) { }
 
-  addProduct(data: any) {
-    return this.http.post<any>(environment.baseUrl+'products', data);
+  addExpense(data: any) {
+    return this.http.post<any>(environment.baseUrl+'expenses', data);
+  }
+
+  getExpenses() {
+    return this.http.get<any>(environment.baseUrl+'expenses');
   }
 }

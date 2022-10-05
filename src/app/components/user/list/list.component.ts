@@ -9,6 +9,7 @@ import { ApiServiceService } from 'src/app/shared/services/api/api-service.servi
 })
 export class ListComponent implements OnInit {
   productsForm!: FormGroup
+  expenses: any = []
 
   constructor(
     private fb: FormBuilder,
@@ -16,7 +17,20 @@ export class ListComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getExpenses()
     this.createForm()
+  }
+
+  getExpenses() {
+    this.api.getExpenses().subscribe(
+      success => {
+        console.log('getExpenses : ', success)
+        this.expenses = success
+      }, err => {
+        console.log("err : ", err)
+        alert(err.message);
+      }
+    )
   }
 
   createForm() {
@@ -28,7 +42,7 @@ export class ListComponent implements OnInit {
       amount: [],
       description: [''],
       expense_category: [''],
-      payment_by: [''],
+      paid_by: [''],
       date_time: [date + ' ' + time]
     })
   }
@@ -38,10 +52,11 @@ export class ListComponent implements OnInit {
     let productModel = Object.assign({}, this.productsForm.value);
     console.log(productModel);
 
-    this.api.addProduct(productModel).subscribe(
+    this.api.addExpense(productModel).subscribe(
       success => {
         console.log('success : ', success);
         document.getElementById('closePopup')?.click()
+        this.getExpenses()
         this.productsForm.reset();
         alert('Product added successfully');
       }, err => {

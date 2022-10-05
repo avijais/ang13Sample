@@ -1,30 +1,44 @@
 {
-  "products": [
+  "expenses": [
     {
       "id": 1,
-      "name": "Vanila",
-      "product_type": "Cake",
-      "cream_type": "normal"
+      "amount": "1132.09",
+      "description": "Axis CC netmeds medicine for papa and me",
+      "expense_category": "Medicine",
+      "paid_by": "Axis CC",
+      "date_time": "5/9/2022 16:15:30"
     },
     {
       "id": 2,
-      "name": "Choco Chips",
-      "product_type": "Cake",
-      "cream_type": "fresh"
+      "amount": "1132.09",
+      "description": "Axis CC netmeds medicine for papa and me",
+      "expense_category": "Medicine",
+      "paid_by": "Axis CC",
+      "date_time": "5/9/2022 16:15:30"
     },
     {
       "id": 3,
-      "name": "Vanilla",
-      "product_type": "Cake",
-      "cream_type": "Fresh"
+      "amount": "1132.09",
+      "description": "Axis CC netmeds medicine for papa and me",
+      "expense_category": "Medicine",
+      "paid_by": "Axis CC",
+      "date_time": "5/9/2022 16:15:30"
     },
     {
       "id": 4,
       "amount": "1132.09",
       "description": "Axis CC netmeds medicine for papa and me",
       "expense_category": "Medicine",
-      "payment_by": "Axis CC",
+      "paid_by": "Axis CC",
       "date_time": "5/9/2022 16:15:30"
+    },
+    {
+      "id": 5,
+      "amount": "444",
+      "description": "Axis CC Flipkart Savi Soap my face wash",
+      "expense_category": "Grocery",
+      "paid_by": "Axis CC",
+      "date_time": "5/9/2022 16:42:35"
     }
   ]
 }

@@ -18,13 +18,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let item of [1,2,3,4]; let i = index;">
+            <tr *ngFor="let expense of expenses; let i = index;">
                 <th scope="col">{{i+1}}</th>
-                <td>Sample</td>
-                <td>Sample</td>
-                <td>Sample</td>
-                <td>Sample</td>
-                <td>Sample</td>
+                <td>{{expense?.amount}}</td>
+                <td>{{expense?.description}}</td>
+                <td>{{expense?.expense_category}}</td>
+                <td>{{expense?.paid_by}}</td>
+                <td>{{expense?.date_time}}</td>
                 <td>
                     <button type="button" class="btn btn-warning">Edit</button>
                     <button type="button" class="btn btn-danger m-2">Delete</button>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Payment By</label>
-                        <input formControlName="payment_by" type="text" class="form-control" placeholder="Payment By">
+                        <input formControlName="paid_by" type="text" class="form-control" placeholder="Payment By">
                     </div>
                 </form>
             </div>
