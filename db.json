@@ -11,6 +11,12 @@
       "name": "Choco Chips",
       "product_type": "Cake",
       "cream_type": "fresh"
+    },
+    {
+      "id": 3,
+      "name": "Vanilla",
+      "product_type": "Cake",
+      "cream_type": "Fresh"
     }
   ]
 }
