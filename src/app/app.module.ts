@@ -10,15 +10,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './modules/expense/components/list/list.component';
 import { HeaderComponent } from './modules/layout/pages/header/header.component';
 import { MainViewComponent } from './modules/layout/components/main-view/main-view.component';
-import { SelectorsComponent } from './css-scss/components/selectors/selectors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
     HeaderComponent,
-    MainViewComponent,
-    SelectorsComponent,
+    MainViewComponent
   ],
   imports: [
     BrowserModule,
