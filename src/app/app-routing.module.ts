@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/auth/components/login.component';
-import { ListComponent } from './modules/expense/components/list/list.component';
+
+const expenseModule = () => import('./modules/expense/expense-routing.module').then( m => m.ExpenseRoutingModule );
+
 
 const routes: Routes = [
   { path: '', component: LoginComponent},
-  { path: 'list', component: ListComponent}
+  { path: 'list', loadChildren: expenseModule }
 ];
 
 @NgModule({
