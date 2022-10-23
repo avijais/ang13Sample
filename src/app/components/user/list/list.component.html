@@ -42,7 +42,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add Expense</h5>
                 <button id="closePopup" type="button" (click)="onClosePopup()" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -54,8 +54,8 @@
                         <input formControlName="amount" type="text" class="form-control" placeholder="Amount">
                     </div>
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">Description</label>
-                        <input formControlName="description" type="text" class="form-control" placeholder="Description">
+                        <label for="exampleFormControlInput1">Paid To</label>
+                        <input formControlName="paid_to" type="text" class="form-control" placeholder="Expense Category">
                     </div>
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Expense Category</label>
@@ -64,6 +64,10 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput1">Payment By</label>
                         <input formControlName="paid_by" type="text" class="form-control" placeholder="Payment By">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlInput1">Description</label>
+                        <input formControlName="description" type="text" class="form-control" placeholder="Description">
                     </div>
                 </form>
             </div>

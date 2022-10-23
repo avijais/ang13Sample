@@ -41,6 +41,7 @@ export class ListComponent implements OnInit {
     this.productsForm = this.fb.group({
       id: [],
       amount: [],
+      paid_to: [],
       description: [''],
       expense_category: [''],
       paid_by: [''],
