@@ -12,4 +12,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onSubmit() {
+    throw Error("Not a given body");
+  }
+
 }

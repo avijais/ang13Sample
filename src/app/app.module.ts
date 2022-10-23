@@ -5,17 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { ListComponent } from './components/user/list/list.component';
-import { AddComponent } from './components/user/add/add.component';
 import { HttpClientModule } from '@angular/common/http';
-import { LoginComponent } from './modules/auth/components/login/login.component';
+
+import { ListComponent } from './modules/expense/components/list/list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    AddComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
