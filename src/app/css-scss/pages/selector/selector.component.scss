@@ -8,6 +8,13 @@ section, a {
     color: pink;
 }
 
+// using lement selector change the default behaviour of li elemet "list-style-type"
 li {
     list-style-type: none; //can also make it square or etc
+    list-style-position: inside;
+}
+
+// class selector
+.text-red {
+    color: red;
 }
