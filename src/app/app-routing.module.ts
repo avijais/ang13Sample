@@ -8,6 +8,7 @@ const cssScssModule = () => import('./css-scss/css-scss-routing.module').then( m
 
 
 const routes: Routes = [
+  { path: '', redirectTo: '/list', pathMatch: 'full' },
   {
     path: '',
     component: MainViewComponent,
@@ -16,7 +17,7 @@ const routes: Routes = [
       { path: 'css-scss', loadChildren: cssScssModule }
     ]
   },
-  { path: 'login', component: LoginComponent},
+  { path: 'login', component: LoginComponent}
 ];
 
 @NgModule({
