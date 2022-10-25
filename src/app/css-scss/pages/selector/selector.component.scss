@@ -3,18 +3,98 @@ p {
     color: green;
 }
 
-// Multiple Element Selector
-section, a {
-    color: pink;
+// h2 element
+h2 {
+    background-color: #777;
+    padding-left: 20px;
+    margin-left: -10px;
 }
 
-// using lement selector change the default behaviour of li elemet "list-style-type"
+// Multiple Element Selector
+section, a {
+    color:pink;
+}
+
+// using element selector, change the default behaviour of "li" element "list-style-type"
 li {
     list-style-type: none; //can also make it square or etc
     list-style-position: inside;
 }
 
 // class selector
-.text-red {
-    color: red;
+.colorFont {
+    color:red;
+    font-weight: bold;
 }
+
+// "strong" element and "span" with class "colorFont"
+strong,span.colorFont {
+    color: burlywood;
+}
+
+// All "em" element inside "p" element
+p em {
+    color: #447788
+} 
+
+
+// "em" element just after the "h3" element
+h3+em {
+    font-size: 200%;
+    color: #463984;
+}
+
+// "em" element just after the "h3" element
+body h3+em {
+    font-size: 200%;
+    color: #463984;
+}
+
+// Change "a" element's content when "hover" the mouse
+a:hover{
+    color: black;
+    text-decoration: none;
+}
+
+
+.special {
+    font-family: 'Courier New', Courier, monospace;
+}
+// all selector in one
+div h3+span .special{
+    color: yellow;
+    background-color: grey;
+}
+ 
+
+// id selector
+#text-violet {
+    color:violet;
+}
+
+//Element with id selector
+p#specialId{
+    color:rebeccapurple;
+}
+
+// Attribute selector : using class attribute
+// will applied on li which have class attribute
+li[class]{
+    font-size: 200%;
+}
+
+// Attribute selector : li which have class="a", ye sirf usi li element ko select karega jsika same to same ye likha ho 'class="a"'
+li[class="a"]{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+// Class which have class name bb, aur bhi classes ho sakte hain but "bb" class agar hai to css apply hoga
+li[class~="bb"]{
+    color: rosybrown;
+}
+
+// set all over background as white
+// un-comment the css code to check, its working I checked
+// *{
+//     background-color: white;
+// }

@@ -4,14 +4,14 @@
     <div style="padding-left:15px;">
         <div>
             <h2><i>Element Selector</i></h2>
-            <div style="padding-left: 15px;">
-                <h3>1. Example - Using single element selector</h3>
-                    <p class="pAllSide">This is para 2; example for <strong>Element Selector</strong></p>
+            <div class="pAllSide">
+                <h3>1. Example - Single element selector</h3>
+                    <p class="pAllSide">This is para 2; example for <strong class="colorFont">Element Selector</strong></p>
                 
-                <h3>2. Example - Using multiple element selector</h3>
+                <h3>2. Example - Multiple element selector</h3>
                     <section class="pAllSide">This is para 1; <a href="https://example.com">example</a> for <strong>Element Selector</strong></section>
 
-                <h3>3. Example : Change default behaviour of "li" element property "list-style-type" from "disc" to "none"</h3>
+                <h3>3. Example - Change default behaviour of "li" element property "list-style-type" from "disc" to "none"</h3>
                 <ul>
                     <li>Item 1</li>
                     <li>Item 2</li>
@@ -21,12 +21,100 @@
         </div>
         <div>
             <h2><i>Class Selector</i></h2>
-            <div style="padding-left: 15px;">
-                <h3>4. Example : Using class selector set 2nd Item in red color</h3>
+            <div class="pAllSide">
+                <h3>4. Example - Class selector set 2nd Item in red color</h3>
                 <ul>
                     <li>Item 1</li>
-                    <li class="text-red">Item 2</li>
+                    <li class="colorFont">Item 2</li>
                     <li>Item 3</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h2><i>Descendant combinator selector</i></h2>
+            <div class="pAllSide">
+                <h3>5. Example - All "Em" element inside "p" element</h3>
+                <p style="padding: 0 0 0 20px">Css will not apply here, <em>but css will apply here bcoz it's inside "em" element</em></p>
+                <p style="padding: 0 0 0 20px;">Again Css will not apply here, <em>but css will apply here bcoz it's inside "em" element</em></p>
+            </div>
+        </div>
+        <div>
+            <h2><i>Adjacent combinator selector</i></h2>
+            <div class="pAllSide">
+                <h3>6. Example - "Em" element just after the "h3" element</h3>
+                <em class="pAllSide">"em" element just after the "h3" element</em>
+            </div>
+        </div>
+        <div>
+            <h2><i>Psudo class selector</i></h2>
+            <div class="pAllSide">
+                <h3>7. Example - Change "a" element's content when "hover" the mouse</h3>
+                <p>Change content as black and remove underline when hover the mouse on link, <a href="https://example.com">https://www.example.com</a></p>
+            </div>
+        </div>
+        <div>
+            <h2><i>All Selectors in 1</i></h2>
+            <div class="pAllSide">
+                <h3>8. Example - "body" element's "h3's" just after "p" element's "span" element which have class</h3>
+                <span class="pAllSide">This is the sample text inside p, <span class="special">span is inside p element</span></span>
+            </div>
+        </div>
+
+        <div>
+            <h2><i>Id Selector</i></h2>
+            <div class="pAllSide">
+                <h3>9. Example - Id selector set 1st Item in violet color</h3>
+                <ul>
+                    <li id="text-violet">Item 1</li>
+                    <li><span class="colorFont">Item 2</span></li>
+                    <li>Item 3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h2><i>Element+Id Selector</i></h2>
+            <div class="pAllSide">
+                <h3>10. Example - Element with Id selector </h3>
+                <p id="specialId">Example of Element with Id Selector</p>
+            </div>
+        </div>
+
+        <div>
+            <h2><i>Attribute Selector</i></h2>
+            <div class="pAllSide">
+                <h3>11. Example - li which have class attribute, set font size 200%</h3>
+                <ul>
+                    <li class="d">Item 1</li>
+                    <li class="b">Item 2</li>
+                    <li class="c">Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h2><i>Attribute Selector</i></h2>
+            <div class="pAllSide">
+                <h3>12. Example - li which have class="a", set font-family Times New Roam</h3>
+                <ul>
+                    <li class="a">Item 1</li>
+                    <li class="d">Item 2</li>
+                    <li class="e">Item 3</li>
+                    <li>Item 4</li>
+                </ul>
+            </div>
+        </div>
+
+        <div>
+            <h2><i>Attribute Selector</i></h2>
+            <div class="pAllSide">
+                <h3>13. Example - All li which have class "bb", set font-style oblique</h3>
+                <ul>
+                    <li>Item 1</li>
+                    <li class="bb">Item 2</li>
+                    <li>Item 3</li>
+                    <li class="c bb">Item 4</li>
                 </ul>
             </div>
         </div>
