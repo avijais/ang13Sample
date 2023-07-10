@@ -7,14 +7,14 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./confirmation-dialog.component.scss']
 })
 export class ConfirmationDialogComponent implements OnInit {
-  title: string = '';
-  message: string = '';
+  // title: string = '';
+  // message: string = '';
 
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: ConfirmDialogModel
   ) {
-    this.title = data.title;
-    this.message = data.message;
+    // this.title = data.title;
+    // this.message = data.message;
   }
 
   ngOnInit(): void {
@@ -23,5 +23,10 @@ export class ConfirmationDialogComponent implements OnInit {
 }
 
 export class ConfirmDialogModel {
-  constructor(public title: string, public message: string) { }
+  constructor(
+    public title: string,
+    public message: string,
+    public confirmTxt: string,
+    public cancelTxt: string
+  ) { }
 }

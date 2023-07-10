@@ -20,7 +20,7 @@ export class MatDashboardComponent implements OnInit {
   openConfirmDialog(): void {
     const message = `Are you sure you want to do this?`;
 
-    const dialogData = new ConfirmDialogModel("Confirm Action", message);
+    const dialogData = new ConfirmDialogModel("Confirm Action", message, 'Yes', 'No');
 
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       maxWidth: "400px",
