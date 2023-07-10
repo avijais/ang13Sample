@@ -8,7 +8,7 @@ const cssScssModule = () => import('./css-scss/css-scss-routing.module').then(m 
 const matModule = () => import('./modules/mat-example/mat-example.module').then(m => m.MatExampleModule);
 
 const routes: Routes = [
-  { path: '', redirectTo: '/list', pathMatch: 'full' },
+  { path: '', redirectTo: '/mat', pathMatch: 'full' },
   {
     path: '',
     component: MainViewComponent,

@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-// import { ConfirmationDialogService } from '../services/confirmation-dialog/confirmation-dialog.service';
-import { ConfirmDialogModel, ConfirmationDialogComponent } from '../components/confirmation-dialog/confirmation-dialog.component';
-import { MatDialog } from "@angular/material/dialog";
+import { ConfirmationDialogService } from '../services/confirmation-dialog/confirmation-dialog.service';
 
 @Component({
   selector: 'app-mat-dashboard',
@@ -11,23 +9,18 @@ import { MatDialog } from "@angular/material/dialog";
 export class MatDashboardComponent implements OnInit {
 
   constructor(
-    public dialog: MatDialog) { }
+    public dialogService: ConfirmationDialogService
+  ) { }
 
   ngOnInit(): void {
   }
 
-  result: string = '';
+  result: any;
   openConfirmDialog(): void {
     const message = `Are you sure you want to do this?`;
-
-    const dialogData = new ConfirmDialogModel("Confirm Action", message, 'Yes', 'No');
-
-    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
-      maxWidth: "400px",
-      data: dialogData
-    });
-
-    dialogRef.afterClosed().subscribe(dialogResult => {
+    const data = { title: "Confirm Action", message, confirmTxt: 'Yes', cancelTxt: 'No' }
+    this.dialogService.confirmDialog(data).subscribe(dialogResult => {
+      console.log("afterclosed : ", dialogResult)
       this.result = dialogResult;
     });
   }
