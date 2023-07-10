@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // import { ConfirmationDialogService } from '../services/confirmation-dialog/confirmation-dialog.service';
-import { ConfirmationDialogComponent } from '../components/confirmation-dialog/confirmation-dialog.component';
+import { ConfirmDialogModel, ConfirmationDialogComponent } from '../components/confirmation-dialog/confirmation-dialog.component';
 import { MatDialog } from "@angular/material/dialog";
 
 @Component({
@@ -16,10 +16,20 @@ export class MatDashboardComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  openConfirmDialog() {
-    // this.confirmationDialogSer.confirmDialog();
+  result: string = '';
+  openConfirmDialog(): void {
+    const message = `Are you sure you want to do this?`;
 
-    this.dialog.open(ConfirmationDialogComponent);
+    const dialogData = new ConfirmDialogModel("Confirm Action", message);
+
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      maxWidth: "400px",
+      data: dialogData
+    });
+
+    dialogRef.afterClosed().subscribe(dialogResult => {
+      this.result = dialogResult;
+    });
   }
 
 }
