@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './modules/expense/components/list/list.component';
 import { HeaderComponent } from './modules/layout/pages/header/header.component';
 import { MainViewComponent } from './modules/layout/components/main-view/main-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { MainViewComponent } from './modules/layout/components/main-view/main-vi
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
