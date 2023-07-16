@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormControl } from '@angular/forms';
+import { FloatLabelType } from '@angular/material/form-field';
 // import { ConfirmationDialogService } from '../services/confirmation-dialog/confirmation-dialog.service';
 
 @Component({
@@ -8,11 +10,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatDashboardComponent implements OnInit {
 
-  constructor(
-    // public dialogService: ConfirmationDialogService
-  ) { }
+  hideRequiredControl = new FormControl(false);
+  floatLabelControl = new FormControl('auto' as FloatLabelType);
+  options = this._formBuilder.group({
+    hideRequired: this.hideRequiredControl,
+    floatLabel: this.floatLabelControl,
+  });
+
+  constructor(private _formBuilder: FormBuilder) { }
+
+  getFloatLabelValue(): FloatLabelType {
+    return this.floatLabelControl.value;
+    //  || 'auto';
+  }
 
   ngOnInit(): void {
+  }
+
+  selectFile(event: any) {
+    console.log("event : ", event.target.files);
   }
 
   // result: any;

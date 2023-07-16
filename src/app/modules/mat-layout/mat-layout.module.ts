@@ -52,6 +52,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
 import { MatSidenavContainerComponent } from './components/mat-sidenav-container/mat-sidenav-container.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const MatModules = [
   MatRadioModule,
@@ -104,6 +105,7 @@ const MatModules = [
   OverlayModule,
   PortalModule,
   ScrollingModule,
+  ReactiveFormsModule
 ]
 @NgModule({
   declarations: [

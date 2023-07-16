@@ -2,15 +2,66 @@
     <div> Responsive side navigation </div>
 </mat-toolbar>
 
-<app-mat-sidenav-container></app-mat-sidenav-container>
-<!-- <mat-sidenav-container>
-    <mat-sidenav class="mat-elevation-z8" mode="side" opened>Sidenav content</mat-sidenav>
+<!-- Sidenav + MainContent -->
+<mat-sidenav-container>
+    <mat-sidenav class="mat-elevation-z8" mode="side" opened>
+        <button mat-button class="menu-name">
+            <mat-icon>home</mat-icon>
+            <span>Home</span>
+        </button>
+
+        <button mat-button class="menu-name">
+            <mat-icon>person</mat-icon>
+            <span>Profle</span>
+        </button>
+
+        <button mat-button class="menu-name">
+            <mat-icon>info</mat-icon>
+            <span>About</span>
+        </button>
+
+        <mat-divider></mat-divider>
+        <button mat-button class="menu-name">
+            <mat-icon>help</mat-icon>
+            <span>Help</span>
+        </button>
+    </mat-sidenav>
     <mat-sidenav-content>
-        <div class="example-container mat-elevation-z0">
-            Mat Dahsboard
+        <div class="main-content mat-elevation-z0">
+            <div class="mat-elevation-z0">
+                <h4>Bootstrap Loading</h4>
+            </div>
+
+            <form [formGroup]="options" class="flex gap-4 justify-end items-center">
+                <input type="file" #selectBootstrapFile [hidden]="true" (change)="selectFile($event)">
+                <div>
+                    <mat-form-field [floatLabel]="'never'">
+                        <input matInput (click)="selectBootstrapFile.click()" placeholder="Select File" required>
+                    </mat-form-field>
+                </div>
+                <div class="mat-form-field inline">
+                    <div class="mat-form-field-wrapper flex gap-4">
+                        <mat-radio-group class="flex gap-4" aria-label="Select an option">
+                            <mat-radio-button value="append">Append</mat-radio-button>
+                            <mat-radio-button value="override">Override</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
+                </div>
+                <div class="mat-form-field inline">
+                    <div class="mat-form-field-wrapper">
+                        <button mat-raised-button color="primary">
+                            Upload
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-        <div class="main-content mat-elevation-z8">
-            <router-outlet></router-outlet>
-        </div>
+        <!-- <div class="main-content mat-elevation-z8"> -->
+        <router-outlet></router-outlet>
+        <!-- </div> -->
     </mat-sidenav-content>
-</mat-sidenav-container> -->
+</mat-sidenav-container>
+
+
+
+<!-- <app-mat-sidenav-container></app-mat-sidenav-container> -->
