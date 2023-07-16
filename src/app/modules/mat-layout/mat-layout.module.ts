@@ -40,7 +40,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatSidenavContainer, MatSidenavModule } from '@angular/material/sidenav';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -51,6 +51,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { MatSidenavContainerComponent } from './components/mat-sidenav-container/mat-sidenav-container.component';
 
 const MatModules = [
   MatRadioModule,
@@ -107,7 +108,8 @@ const MatModules = [
 @NgModule({
   declarations: [
     MatMainLayoutComponent,
-    MatDashboardComponent
+    MatDashboardComponent,
+    MatSidenavContainerComponent
   ],
   imports: [
     CommonModule,
