@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
+// import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
 import { MatExampleRoutingModule } from './mat-example-routing.module';
-import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+// import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 import { MatDialogModule } from "@angular/material/dialog";
 import { MatIconModule } from "@angular/material/icon";
@@ -12,8 +12,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 
 @NgModule({
   declarations: [
-    MatDashboardComponent,
-    ConfirmationDialogComponent
+    // MatDashboardComponent,
+    // ConfirmationDialogComponent
   ],
   imports: [
     CommonModule,

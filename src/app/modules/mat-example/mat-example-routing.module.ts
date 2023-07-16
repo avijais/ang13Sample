@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
+// import { MatDashboardComponent } from './mat-dashboard/mat-dashboard.component';
 
 const routes: Routes = [
-    { path: '', component: MatDashboardComponent },
+    // { path: '', component: MatDashboardComponent },
 ];
 
 @NgModule({
